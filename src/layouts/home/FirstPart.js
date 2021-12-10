@@ -16,7 +16,7 @@ export default function FirstPart() {
         </div>
 
        <div className="mb-24">
-           <Link to="/collection/bee">
+           <Link to="/collections/bee">
                <Button
                    children="Show all"
                    type="big"
