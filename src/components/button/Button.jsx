@@ -3,6 +3,7 @@ export default function Button({
     type = 'normal',
     bg = 'transparent',
     color = 'black',
+    onClick
 })
 {
     const classNames = [
@@ -17,7 +18,7 @@ export default function Button({
 
     const className =  classNames.filter(c => c.type === type);
 
-    return <button className={className[0].className || '' }>
+    return <button onClick={() => onClick && onClick()} className={className[0].className || '' }>
         {children}
     </button>
 }
