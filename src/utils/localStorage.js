@@ -2,6 +2,15 @@
  * Use localstorage
  */
 export default class LocalStorage {
+
+    /**
+     * @type {{collectionsMetas: string, collections: string}}
+     */
+    static keysAvailable = {
+        collections : 'collections',
+        collectionsMetas : 'collections_metas'
+    }
+
     constructor() {
         this.localStorage = window.localStorage;
     }
@@ -17,7 +26,7 @@ export default class LocalStorage {
 
     /**
      * Get data by key
-     * @param string key
+     * @param string|null key
      */
     get(key) {
         return JSON.parse(this.localStorage.getItem(key));
