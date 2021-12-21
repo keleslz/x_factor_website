@@ -5,7 +5,7 @@
  * @return {JSONifiable|Error}
  */
 const requestApi = async (url , method, options= {}) => {
-    const res = await fetch(url, {
+    const res = await fetch(`http://localhost:8000/api/${url}`, {
         ...options,
         method: method,
     });

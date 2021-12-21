@@ -12,7 +12,7 @@ export default function SecondPart() {
         <h2 className="text-4xl text-center font-semibold mb-12">{title}</h2>
 
         <div className="flex flex-wrap my-14">
-            {paragraphs.map((p) => <p key={p.id} className="w-80 my-6 mx-auto">{p.content}</p>)}
+            {paragraphs.map((p) => <p key={p.id} className="w-80 my-6 mx-auto px-4">{p.content}</p>)}
         </div>
 
         <div>

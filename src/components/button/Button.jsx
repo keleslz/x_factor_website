@@ -3,22 +3,30 @@ export default function Button({
     type = 'normal',
     bg = 'transparent',
     color = 'black',
-    onClick
+    onClick,
+    onMouseOver,
+    onMouseOut
 })
 {
     const classNames = [
         {
             type : 'big',
-            className : `transition hover:shadow-lg px-4 py-2 rounded-md text-2xl font-bold bg-${bg}-400 text-${color} hover:bg-${bg}-500 hover:text-${color}-600`
+            className : `mx-2 transition hover:shadow-lg px-4 py-2 rounded-md text-2xl font-bold bg-${bg}-400 text-${color} hover:bg-${bg}-500 hover:text-${color}-600`
         },
         {
             type : 'normal',
+            className : `mx-2 transition hover:shadow-lg px-4 py-2 rounded-md text-xl font-bold bg-${bg}-400 text-${color} hover:bg-${bg}-500 hover:text-${color}-600`
         }
     ]
 
     const className =  classNames.filter(c => c.type === type);
 
-    return <button onClick={() => onClick && onClick()} className={className[0].className || '' }>
+    return <button
+            onClick={() => onClick && onClick()}
+            onMouseOver={() => onMouseOver && onMouseOver()}
+            onMouseOut={() => onMouseOut && onMouseOut()}
+            className={className[0].className || '' }
+        >
         {children}
     </button>
 }
