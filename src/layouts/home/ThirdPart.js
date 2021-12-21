@@ -11,10 +11,9 @@ export default function ThirdPart() {
 
         const data = localStorage.get(LocalStorage.keysAvailable.collections)?.bee
 
-        if(data !== null)
+        if(data !== null && data?.length > 0)
         {
             const items = [...data].slice(0, 15).map(c => c.imageLink);
-            console.log(items)
             setSlideItems(items);
         }
     },[])

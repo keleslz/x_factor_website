@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 
 import '@assets/styles/App.css';
@@ -8,14 +8,14 @@ import Topbar from "@components/nav/Topbar";
 import Footer from "@components/footer/Footer";
 import requestApi from "@data/api/requestApi";
 import Nft from "@data/model/Nft";
-import LocalStorage from "@utils/localStorage";
 import MessageBanner from "@components/message/MessageBanner";
 import NotFound from "@src/pages/http/NotFound";
-import routes from "../utils/routes";
+import routes from "@utils/routes";
+import LocalStorage from "@utils/localStorage";
 
 function App() {
     const localStorage = new LocalStorage();
-    const items = localStorage.get('nfts');
+    const items = localStorage.get(localStorage?.keysAvailable?.collections);
     const [error, setError] = useState('');
 
     useEffect(async () => {
