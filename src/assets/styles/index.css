@@ -9,8 +9,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-
+  /*background-color: rgba(243, 244, 246, var(--tw-bg-opacity));*/
+  background-color: #1c191c;
+  color: #acacac;
+  letter-spacing: 2px;
 }
 
 code {

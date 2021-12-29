@@ -5,7 +5,7 @@
  */
 const FullContainer = ({children, className = ''}) => {
     return<div
-        className={`${className} rounded-t-lg shadow-lg full-container bg-center bg-gray-50 w-6/12 pt-48 pb-24 flex center flex-col transition ease-in-out duration-700`}
+        className={`${className} container px-2 mx-auto rounded-t-lg full-container w-6/12 pt-8 pb-24 transition ease-in-out duration-700`}
     >
         {children}
     </div>

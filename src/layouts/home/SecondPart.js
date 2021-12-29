@@ -16,9 +16,11 @@ export default function SecondPart() {
         </div>
 
         <div>
-            <img className="lg:w-4/12 mx-auto mb-12" src="https://tailwindcss.com/img/card-top.jpg"
-                 alt="Sunset in the mountains"/>
-            <p className="w-11/12 mx-auto">{lastParagraphs.content} </p>
+            <img className="lg:w-4/12 mx-auto mb-12"
+                 src="https://tailwindcss.com/img/card-top.jpg"
+                 alt="Sunset in the mountains"
+            />
+            <p className="w-11/12 mx-auto">{lastParagraphs.content}</p>
         </div>
     </FullContainer>
 }
