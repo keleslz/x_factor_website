@@ -90,7 +90,7 @@ function App() {
                     <Route exact path={routes.collections} element={<Collection/>}/>
                     <Route path={routes.notFound} element={<NotFound/>}/>
                 </Routes>
-            <Footer/>
+            {/*<Footer/>*/}
         </BrowserRouter>
 
     );

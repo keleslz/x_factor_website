@@ -27,3 +27,64 @@
 .w-95-percent  {
     width: 95%;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-salmon {
+    color: #ff694e;
+}
+
+.bg-salmon {
+    background-color: #ff694e;
+}
+
+.mover-card-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.h-86
+{
+    height: 86%;
+}
+
+.growth {
+    position:absolute;
+    z-index: -50;
+    background: transparent;
+    transition: all .5s ease-in-out .1s;
+}
+
+.card-growth-enabled{
+    top:  -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -50px;
+    background: #fefefe;
+}
+
+.card-growth-disabled{
+    top:  50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    background: transparent;
+}
+
+/*
+
+    id;
+    imageLink ;
+    likeCount;
+    price = 0.02;
+    isSolded = false;
+    collection;
+    collectionLength;
+    priceSolded;
+    */
