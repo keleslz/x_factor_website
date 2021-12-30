@@ -17,7 +17,6 @@ export default function SecondPart() {
     const nav = useNavigate();
 
     useEffect(() => {
-        console.log(collections)
         if(collections === null)
         {
             nav('/error/0001')
