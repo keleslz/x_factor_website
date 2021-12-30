@@ -9,7 +9,7 @@ if(process.env.NODE_ENV === 'development') {
     }
 }else {
     config = {
-        DOMAIN_NAME : 'https://x-factor.sideskill.fr'
+        DOMAIN_NAME : 'https://api-x-factor.sideskill.fr'
     }
 }
 

@@ -1,6 +1,6 @@
 import {useLocation} from "react-router-dom";
 import beeLogo from "@assets/images/bee.png";
-import routes from "../../utils/routes";
+import routes from "@utils/routes";
 
 const texts = require('@data/json/text.json');
 
