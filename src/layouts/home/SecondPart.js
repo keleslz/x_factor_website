@@ -2,6 +2,7 @@ import FullContainer from "@components/container/Container";
 import {useEffect, useState} from "react";
 import LocalStorage from "@utils/localStorage";
 import {convertObjectToArray} from "@utils/arrayUtils";
+import {useNavigate} from "react-router-dom";
 
 const texts = require('@data/json/text.json');
 
@@ -13,7 +14,16 @@ export default function SecondPart() {
     const [p, setP] = useState(texts.home.paragraphs || []);
     const [pictures, setPictures] = useState([]);
     const [collections, setCollections] = useState(localStorage.get(LocalStorage.keysAvailable.collections))
+    const nav = useNavigate();
 
+    useEffect(() => {
+        console.log(collections)
+        if(collections === null)
+        {
+            nav('/error/0001')
+            return;
+        }
+    }, [])
     useEffect(() => {
         if(collections)
         {
