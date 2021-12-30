@@ -1,48 +1,48 @@
 {
   "home": {
-    "texts": [
-      {
-        "cards": [
-          {
-            "id": 1,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores perferendis eaque, exercitationem praesentium nihil.",
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          },
-          {
-            "id": 2,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores perferendis eaque, exercitationem praesentium nihil.",
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          },
-          {
-            "id": 3,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores perferendis eaque, exercitationem praesentium nihil.",
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          }
-        ]
-      },{
-        "paragraphs": [
-          {
-            "id": 1,
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          },
-          {
-            "id": 2,
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          },
-          {
-            "id": 3,
-            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      }
+    "paragraphs": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     ],
+    "intro": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Latin literature from 45 BC, making it over 2000 years old",
     "titles": [
       "1,111 unique NFT's who need Drivers",
       "A title"
+    ],
+    "accordion" : [
+      {
+      "title" : "Where can I buy X-Factor ?",
+      "text" : "You will only be able to mint them through our mint page which will be released on our Discord Channel. After the mint process is finished, we’ll be listing on OpenSea"
+      },
+      {
+        "title" : "What is the total supply of X-Factor ?",
+        "text" : "Total 1 111"
+      },
+      {
+        "title" : "What is the price of X-Factor ?",
+        "text" : "0.02 ETH, but it can change because of ETH price fluctuation"
+      },
+      {
+        "title" : "When is the mint date?",
+        "text" : "TBA"
+      },
+      {
+        "title" : "Are you interested in promotion service?",
+        "text" : "Yes, we’re open to all suggestions, contact us through Twitter or Discord"
+      },
+      {
+        "title" : "Will you be releasing second NFT after X-Factor ? Why?",
+        "text" : "Yes, both of them will be highly related and we consider it as 1 project. When we did all the calculations, it’s obvious that to fully complete our roadmap, we will need a lot of money, crypto marketing and development have 5-10x higher prices than usual projects."
+      },
+      {
+        "title" : "Will I have any benefits if I hold X-Factor  during second NFT launch?",
+        "text" : "It will be worth every single penny and more! And we don’t even count royalties which you’ll receive in the meantime."
+      },
+      {
+        "title" : "What is your final goal? What is the motivation behind it?",
+        "text" : "Our main goal is to complete final step in the roadmap and launch our unique game. We strongly believe that we can achieve that with enough money raised. We found a solution how it can be easy to earn money through a simple game and give big income for NFT holders. Game itself will have a developers fee, that’s why mint sale is not our final goal like for some other projects developers."
+      }
     ]
   },
   "social_network": [
@@ -59,6 +59,6 @@
       "link" : "https://www.google.fr/"
     }
   ],
-  "name": "X Factor",
-  "copyright": "2021-2022 X Factor"
+  "name": "X-Factor",
+  "copyright": "2021-2022 X-Factor"
 }

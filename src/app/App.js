@@ -12,6 +12,7 @@ import MessageBanner from "@components/message/MessageBanner";
 import NotFound from "@src/pages/http/NotFound";
 import routes from "@utils/routes";
 import LocalStorage from "@utils/localStorage";
+import InternalError from "@src/pages/http/InternalError";
 
 function App() {
     const localStorage = new LocalStorage();
@@ -86,11 +87,12 @@ function App() {
             <Topbar/>
             <MessageBanner message={error}/>
                 <Routes>
-                    <Route exact path={routes.home} element={<Home/>}/>
-                    <Route exact path={routes.collections} element={<Collection/>}/>
-                    <Route path={routes.notFound} element={<NotFound/>}/>
+                    <Route exact path={routes.home} element={<Home />}/>
+                    <Route exact path={routes.collections} element={<Collection />}/>
+                    <Route exact path={routes.http.internalError} element={<InternalError />}/>
+                    <Route path={routes.http.notFound} element={<NotFound />}/>
                 </Routes>
-            {/*<Footer/>*/}
+            <Footer/>
         </BrowserRouter>
 
     );

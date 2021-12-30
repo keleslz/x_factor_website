@@ -1,7 +1,10 @@
 const routes = {
     home : '/',
     collections : '/collections/:name',
-    notFound : '/*'
+    http : {
+        notFound : '/*',
+        internalError: '/error/:code'
+    }
 }
 
 export default routes;

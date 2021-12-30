@@ -8,7 +8,7 @@ const SpringCarousselAuto = ({children, className, from, to , duration = 30_000,
       loop: { reverse: true },
       config: { duration: duration },
       reset: true,
-      onRest : () => console.log('to end')
+      // onRest : () => console.log('to end')
    })
 
    return <animated.div

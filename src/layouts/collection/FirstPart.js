@@ -2,10 +2,10 @@ import {useEffect, useState} from "react";
 import FullContainer from "@components/container/Container";
 import NftCard from "@components/nftCard/NftCard";
 import LocalStorage from "@utils/localStorage";
-import MessageBanner from "../../components/message/MessageBanner";
-import Button from "../../components/button/Button";
+import MessageBanner from "@components/message/MessageBanner";
+import Button from "@components/button/Button";
 import {useParams} from "react-router-dom";
-import Loader from "../../components/loader/Loader";
+import Loader from "@components/loader/Loader";
 
 export default function FirstPart() {
     const {name} = useParams();

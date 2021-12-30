@@ -1,15 +1,17 @@
-import {Link, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import beeLogo from "@assets/images/bee.png";
 import routes from "../../utils/routes";
-import {  } from "react-router-dom";
-import Button from "../button/Button";
 
 const texts = require('@data/json/text.json');
 
 export default function Topbar() {
+    const location = useLocation();
     const socialNetworks = texts.social_network;
     const name = texts.name;
 
+    const matches = [routes.home];
+
+    if(!matches.includes(location.pathname)) return <></>
 
     return <nav className="transition ease-in-out container mx-auto flex justify-between flex-wrap p-4">
         <div className="flex w-full md:w-72 center mb-3">

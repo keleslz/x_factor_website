@@ -7,20 +7,32 @@ import beeLogo from "@assets/images/bee.png";
 import {convertObjectToArray, getTwoLastCollections} from "@utils/arrayUtils";
 import NftCard from "@components/nftCard/NftCard";
 import SpringCarousselAuto from "@components/spring-caroussel-auto/SpringCarousselAuto";
+import routes from "../../utils/routes";
 
 const texts = require('@data/json/text.json');
 const imageSize = 300;
 
 export default function FirstPart() {
-    const title = texts.home.titles[0];
-    const cards = texts.home.texts[0].cards;
+    const intro = texts.home.intro;
     const localStorage = new LocalStorage();
     const [metas, setMetas] = useState(localStorage.get(LocalStorage.keysAvailable.collectionsMetas));
     const [collections, setCollections] = useState(localStorage.get(LocalStorage.keysAvailable.collections))
 
+
+    useEffect(() => {
+        const isItemsMissing = localStorage.get(LocalStorage.keysAvailable.collections) === null;
+
+        if (isItemsMissing === true)
+        {
+            window.location.href = '/error/0001';
+            return;
+        }
+
+    },[localStorage.get(LocalStorage.keysAvailable.collections)])
+
     useEffect(() => {
         let collectionsLength = undefined;
-        if(collections) collectionsLength = Object.keys(collections).length;
+        if(collections)  collectionsLength = Object.keys(collections).length;
 
         if(Number.isInteger(collectionsLength) && collectionsLength === metas?.length)
         {
@@ -28,7 +40,7 @@ export default function FirstPart() {
             twoLastCollections = convertObjectToArray(twoLastCollections)
             setCollections(twoLastCollections);
         }
-    }, [])
+    },[])
 
     /**
      * @param {number} index
@@ -57,10 +69,7 @@ export default function FirstPart() {
         <div className="flex justify-around flex-wrap space-x-4 mb-12">
 
             <div className="w-80 mb-12">
-                <p className="mb-8">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old
-                </p>
+                <p className="mb-8">{intro}</p>
 
                 <Pills />
             </div>

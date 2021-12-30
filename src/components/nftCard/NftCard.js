@@ -1,5 +1,3 @@
-import like from "@assets/icons/like.png";
-import ethereum from "@assets/icons/ethereum.png";
 import {useState} from "react";
 
 /**
