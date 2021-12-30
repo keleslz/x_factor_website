@@ -1,3 +1,5 @@
+import config from "../../app/config";
+
 /**
  * @param {string} url
  * @param {string} method
@@ -5,7 +7,7 @@
  * @return {JSONifiable|Error}
  */
 const requestApi = async (url , method, options= {}) => {
-    const res = await fetch(`http://localhost:8000/api/${url}`, {
+    const res = await fetch(`${config.DOMAIN_NAME}/api/${url}`, {
         ...options,
         method: method,
     });
