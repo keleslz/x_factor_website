@@ -7,7 +7,6 @@ import beeLogo from "@assets/images/bee.png";
 import {convertObjectToArray, getTwoLastCollections} from "@utils/arrayUtils";
 import NftCard from "@components/nftCard/NftCard";
 import SpringCarousselAuto from "@components/spring-caroussel-auto/SpringCarousselAuto";
-import routes from "../../utils/routes";
 
 const texts = require('@data/json/text.json');
 const imageSize = 300;
@@ -17,18 +16,6 @@ export default function FirstPart() {
     const localStorage = new LocalStorage();
     const [metas, setMetas] = useState(localStorage.get(LocalStorage.keysAvailable.collectionsMetas));
     const [collections, setCollections] = useState(localStorage.get(LocalStorage.keysAvailable.collections))
-
-
-    useEffect(() => {
-        const isItemsMissing = localStorage.get(LocalStorage.keysAvailable.collections) === null;
-
-        if (isItemsMissing === true)
-        {
-            window.location.href = '/error/0001';
-            return;
-        }
-
-    },[localStorage.get(LocalStorage.keysAvailable.collections)])
 
     useEffect(() => {
         let collectionsLength = undefined;
