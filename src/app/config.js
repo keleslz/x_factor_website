@@ -2,7 +2,7 @@
  * Global confi available on app and not sensitive
  */
 const config = {
-    DOMAIN_NAME : 'https://api-x-factor.sideskill.fr'
+    DOMAIN_NAME : 'http://localhost:8000'
 }
 
 export default config
