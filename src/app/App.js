@@ -13,13 +13,19 @@ import NotFound from "@src/pages/http/NotFound";
 import routes from "@utils/routes";
 import LocalStorage from "@utils/localStorage";
 import InternalError from "@src/pages/http/InternalError";
+import {useDispatch, useSelector} from "react-redux";
+import {addCollectionsActionType, setCollections} from "../redux/reducers/collectionsReducer";
 
 function App() {
     const localStorage = new LocalStorage();
     const items = localStorage.get(localStorage?.keysAvailable?.collections);
     const [error, setError] = useState('');
+    const collections = useSelector(() => addCollectionsActionType()); // return select action name
+    const dispatch = useDispatch();
 
     useEffect(async () => {
+
+        // dispatch(setCollections((['slz', 'virgule'])));
 
         if (!items) {
             const collections = await requestApi('collections');

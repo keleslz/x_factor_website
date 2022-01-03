@@ -23,6 +23,7 @@ export default function SecondPart() {
             return;
         }
     }, [])
+
     useEffect(() => {
         if(collections)
         {
