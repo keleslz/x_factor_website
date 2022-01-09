@@ -6,10 +6,7 @@ import reportWebVitals from './app/reportWebVitals';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from '../src/redux/reducers/index.js';
-
-const store = createStore(rootReducer);
+import store from './redux/store'
 
 ReactDOM.render(
   <React.StrictMode>

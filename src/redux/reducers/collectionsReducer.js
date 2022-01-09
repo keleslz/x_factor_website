@@ -1,44 +1,18 @@
-/**
- * @type {{items: Nft[]}}
- */
-const init = {
-    items : []
-}
-const ADD_COLLECTIONS = 'ADD_COLLECTIONS';
+import { createSlice } from '@reduxjs/toolkit'
 
-export const addCollectionsActionType = () => ADD_COLLECTIONS;
+export const collectionsSlice = createSlice({
+    name: 'collections',
+    initialState: {
+        items: [],
+    },
+    reducers: {
+        add: (state, action) => {
+            state.items = state.items.concat(action.payload);
+        }
+    },
+})
 
-/**
- * @param values
- * @return {{type: string, value}}
- */
-export const setCollections = (values) => {
-    return {
-        type: ADD_COLLECTIONS,
-        items: values
-    }
-}
+// Action creators are generated for each case reducer function
+export const { add } = collectionsSlice.actions
 
-/**
- *
- * @param {object} state
- * @param {object} action
- * @param {array} action.items are passed by setCollections function called on dispatch function
- *
- * @return {{items: Nft[]}}
- */
-const collectionsReducer = (state = init, action) => {
-    console.log(state,'state',action, 'action')
-    switch (action.type) {
-        case ADD_COLLECTIONS:
-            return {
-                ...state,
-                items : state.items.concat(action.items)
-            };
-        default:
-            return state;
-    }
-}
-
-export  default collectionsReducer;
-
+export default collectionsSlice.reducer

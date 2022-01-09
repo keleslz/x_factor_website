@@ -14,10 +14,12 @@ const Pills =() => {
     const [isHidden, setIsHidden] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
+        const t = setTimeout(() => {
             setPositions(endPositions);
             setIsHidden(!isHidden);
         }, 200)
+
+        return () => clearTimeout(t);
     }, [])
 
     return <div className="flex">

@@ -1,24 +1,18 @@
-const ADD_COLLECTIONS_METAS = 'ADD_COLLECTIONS_METAS';
+import { createSlice } from '@reduxjs/toolkit'
 
-export const getCollectionsMetas = () => ADD_COLLECTIONS_METAS;
+export const collectionsMetaSlice = createSlice({
+    name: 'collectionsMetas',
+    initialState: {
+        metas: [],
+    },
+    reducers: {
+        add: (state, action) => {
+            state.metas = state.metas.concat(action.payload);
+        }
+    },
+})
 
-export const setCollections = (values) => {
-    return {
-        type: ADD_COLLECTIONS_METAS,
-        value: values
-    }
-}
+// Action creators are generated for each case reducer function
+export const { add } = collectionsMetaSlice.actions
 
-
-const collectionReducer = (state = [], action) => {
-    console.log(state, action)
-    switch (action.type) {
-        // case 'ADD_COLLECTIONS_METAS':
-        //     return state.concat(action);
-        default:
-            return state;
-    }
-}
-
-export  default collectionReducer;
-
+export default collectionsMetaSlice.reducer

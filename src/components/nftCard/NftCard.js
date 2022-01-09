@@ -21,7 +21,7 @@ const NftCard = ({nft, index}) => {
                 {nft.isSolded && <div className="z-20 hover:bg-transparent transition duration-500 bg-black opacity-60 absolute inset-0 center flex text-2xl font-semibold">Solded</div>}
 
                 <div className="w-80 h-56 overflow-hidden m-0 center flex">
-                    <img className="" src={nft.imageLink} />
+                    <img className="" src={nft.imageLink} alt="" />
                 </div>
 
 
