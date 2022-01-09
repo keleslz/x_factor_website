@@ -15,7 +15,7 @@ export default function Topbar() {
 
     return <nav className="transition ease-in-out container mx-auto flex justify-between flex-wrap p-4">
         <div className="flex w-full md:w-72 center mb-3">
-            <img className="pointer" src={beeLogo} width="40" height="40"/>
+            <img className="pointer" src={beeLogo} width="40" height="40" alt=""/>
             <h2 className="ml-2 pointer">{name}</h2>
         </div>
 
@@ -23,7 +23,10 @@ export default function Topbar() {
             {socialNetworks.map((s, i) => <a
                 className="transform center flex transition ease-in-out hover:text mx-4 hover:font-bolder hover:scale-125"
                 key={i} target="_blank"
-                href={s.link}>{s.name}</a>)
+                href={s.link}
+                rel="noreferrer"
+            >{s.name}</a>)
+
             }
         </div>
 

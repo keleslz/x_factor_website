@@ -1,63 +1,48 @@
 import FullContainer from "@components/container/Container";
-import {useEffect, useState} from "react";
-import LocalStorage from "@utils/localStorage";
 import Pills from "@components/pills/Pills";
 import Rotator from "@components/rotator/Rotator";
 import beeLogo from "@assets/images/bee.png";
-import {convertObjectToArray, getTwoLastCollections} from "@utils/arrayUtils";
 import NftCard from "@components/nftCard/NftCard";
 import SpringCarousselAuto from "@components/spring-caroussel-auto/SpringCarousselAuto";
+import {useSelector} from "react-redux";
 
 const texts = require('@data/json/text.json');
 const imageSize = 300;
 
 export default function FirstPart() {
     const intro = texts.home.intro;
-    const localStorage = new LocalStorage();
-    const [metas, setMetas] = useState(localStorage.get(LocalStorage.keysAvailable.collectionsMetas));
-    const [collections, setCollections] = useState(localStorage.get(LocalStorage.keysAvailable.collections))
-
-    useEffect(() => {
-        let collectionsLength = undefined;
-        if(collections)  collectionsLength = Object.keys(collections).length;
-
-        if(Number.isInteger(collectionsLength) && collectionsLength === metas?.length)
-        {
-            let twoLastCollections = getTwoLastCollections(collectionsLength, collections, 0,9);
-            twoLastCollections = convertObjectToArray(twoLastCollections)
-            setCollections(twoLastCollections);
-        }
-    },[])
+    const collections = useSelector(state => state.collections.items );
 
     /**
      * @param {number} index
      * @return {JSX.Element}
      */
     const displayCollection = (index) => {
-        if(!collections) return;
+        let items = {...collections[index]};
+        const name = Object.keys(items);
+        items = items[name];
 
-        if(collections[index])
+        if(items)
         {
             const from = '0px';
-            const to = `${-(collections[index].length * imageSize) + (imageSize * 3.5)}px`;
+            const to = `${-(items.length * imageSize) + (imageSize * 3.5)}px`;
 
             return  <SpringCarousselAuto from={index === 0 ? from : to}
                to={index === 0 ? to : from}
             >
                 <div className="mb-12 w-max">
                     <div className="flex">
-                        {collections[index].map((item, i) => <NftCard  key={i}  nft={item} index={i} />)}
+                        {items.map((item, i) => <NftCard  key={i}  nft={item} index={i} />)}
                     </div>
                 </div>
             </SpringCarousselAuto>
         }
     }
+
     return <FullContainer>
         <div className="flex justify-around flex-wrap space-x-4 mb-12">
-
             <div className="w-80 mb-12">
                 <p className="mb-8">{intro}</p>
-
                 <Pills />
             </div>
 
@@ -72,7 +57,7 @@ export default function FirstPart() {
             <div className="w-max relative overflow-hidden">
                 <Rotator>
                     <div  className="w-80 text-4xl flex center w-full h-full rounded-full">
-                        <img width={imageSize} src={beeLogo}/>
+                        <img width={imageSize} src={beeLogo} alt=""/>
                     </div>
                 </Rotator>
 

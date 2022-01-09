@@ -8,6 +8,8 @@ export default class Nft
     collection;
     collectionLength;
     priceSolded;
+    isGold = false
+    isXRar = false
 
     constructor(object) {
         this.id = object.id;
@@ -18,5 +20,7 @@ export default class Nft
         this.collection = object.collection;
         this.collectionLength = object.collectionLength;
         this.priceSolded = object.priceSolded;
+        this.isGold = object.isGold;
+        this.isXRar = object.isXRar;
     }
 }

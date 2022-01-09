@@ -12,7 +12,7 @@ const requestApi = async (url , method, options= {}) => {
         method: method,
     });
 
-    if (res.status === 200)
+    if (res.status.toString().startsWith('20'))
     {
         const data = await res.json();
         return data;

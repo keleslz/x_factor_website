@@ -5,8 +5,7 @@
  * @param {number|null} endIndex index to start to split collection which must be return
  */
 export const getTwoLastCollections = (collectionLength, collections , startIndex = null, endIndex = null) => {
-    if(!collections) return false;
-    const collectionsLength = Object.keys(collections).length;
+    const collectionsLength = collections.length;
     const lastIndex = collectionsLength - 1;
     const beforeLastIndex = collectionsLength - 2;
 
@@ -18,13 +17,17 @@ export const getTwoLastCollections = (collectionLength, collections , startIndex
         {
             if(startIndex === null)
             {
-                data[collection] = collections[collection];
+                console.log(data)
+                // data[collection] = collections[collection];
             }else {
-                data[collection] = [...collections[collection]].slice(startIndex, endIndex);
+                // data[collection] = [...collections[collection]].slice(startIndex, endIndex);
+                console.log(data, collection)
             }
         }
         i++;
     }
+
+    console.log(data)
 
     return data;
 }
