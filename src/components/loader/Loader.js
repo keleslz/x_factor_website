@@ -1,5 +1,5 @@
 const Loader = () => {
-    return <div>
+    return <div className="flex center">
         Loading...
     </div>
 }

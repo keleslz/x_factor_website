@@ -13,9 +13,9 @@ const NftCard = ({nft, index}) => {
     }
 
     const getRarityColor = () => {
-        if(nft.isXRar)return 'bg-gray-200'
-        if(nft.isGold)return 'bg-yellow-200'
-        return 'bg-gray-200'
+        if(nft.isXRar)return 'bg-gray-200 border-gray-300'
+        if(nft.isGold)return 'bg-yellow-200 border-yellow-300'
+        return 'bg-gray-200 border-gray-300'
     }
 
     return <div className="rounded-md relative m-4 font-sans cursor-pointer "
@@ -31,13 +31,13 @@ const NftCard = ({nft, index}) => {
                 </div>
 
 
-                <div className={`${isEnabled ? 'text-gray-800' : 'text-transparent'} font-semibold text-lg transition z-0 absolute inset-0 -bottom-9 flex items-end justify-around font-semibold`}>
+                <div className={`${isEnabled ? 'text-gray-800 delay-500' : 'text-transparent delay-150'} transition-colors  ease-in-out font-semibold text-lg transition z-0 absolute inset-0 -bottom-9 flex items-end justify-around font-semibold`}>
                     <p>{nft.collection}</p>
                     {nft.isSolded && <p>Sold</p>}
                     <p>{nft.price}</p>
                 </div>
 
-                <div className={`absolute w-6 h-6 top-2 right-5 rounded-full ${getRarityColor()}`}></div>
+                <div className={`absolute w-6 h-6 top-2 right-5 rounded-full border-2 ${getRarityColor()}`}></div>
             </div>
 
         <div className={`card-growth-${getGrowthClassname()} growth`}></div>

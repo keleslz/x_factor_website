@@ -10,9 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --tw-bg-opacity: 1;
   /*background-color: rgba(243, 244, 246, var(--tw-bg-opacity));*/
-  background-color: #1c191c;
-  color: #acacac;
+  color: #fefefe;
   letter-spacing: 2px;
+  background: #000;
 }
 
 code {

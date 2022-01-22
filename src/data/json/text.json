@@ -43,7 +43,10 @@
         "title" : "What is your final goal? What is the motivation behind it?",
         "text" : "Our main goal is to complete final step in the roadmap and launch our unique game. We strongly believe that we can achieve that with enough money raised. We found a solution how it can be easy to earn money through a simple game and give big income for NFT holders. Game itself will have a developers fee, that’s why mint sale is not our final goal like for some other projects developers."
       }
-    ]
+    ],
+    "collections_categories_description": {
+      "bee": "Even though using \"lorem ipsum\" often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning. Where text is visible in a document, people tend to focus on the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design in order to direct the focus to presentation. \"Lorem ipsum\" also approximates a typical distribution of spaces in English."
+    }
   },
   "social_network": [
     {
