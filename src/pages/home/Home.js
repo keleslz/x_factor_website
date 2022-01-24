@@ -2,13 +2,23 @@ import FirstPart from "@layouts/home/FirstPart";
 import FadeIn from 'react-fade-in';
 import Faq from "@layouts/home/Faq";
 import CategoryRow from "@layouts/home/category-row/CategoryRow";
-import Glych from "../../components/react-vfx/Glych";
-import {VFXDiv, VFXSpan} from "react-vfx";
-import ScrollMotion from "../../components/react-scroll-motion/ScrollMotion";
+import Glych from "@components/react-vfx/Glych";
+import {VFXDiv} from "react-vfx";
+import ScrollMotion from "@components/react-scroll-motion/ScrollMotion";
+import useWallet from "../../hooks/useWallet";
+import FullContainer from "@components/container/Container";
+import useTheme from "@src/hooks/useTheme";
+import {useEffect} from "react";
 
 export default function Home() {
-    return <div className="relative">
+    const [isOpen] = useWallet();
+    const dark = useTheme()[2];
 
+    useEffect(() => {
+        dark();
+    },[])
+
+    return !isOpen ? (<div className="relative">
         <ScrollMotion>
             <Glych>
                 <VFXDiv
@@ -16,7 +26,7 @@ export default function Home() {
                     style={{fontSize: "4em"}}
                     shader="rgbShift"
                 >
-                    Join XFactor on the Metaverse
+                    Join X-Factor on the Metaverse
                 </VFXDiv>
             </Glych>
         </ScrollMotion>
@@ -27,5 +37,5 @@ export default function Home() {
             <CategoryRow/>
             <Faq/>
         </FadeIn>
-    </div>
+    </div>) : <FullContainer />
 }
