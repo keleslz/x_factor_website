@@ -7,7 +7,7 @@ const WalletModal = () => {
     const interact = useWallet()[3];
 
     return <Sail isHidden={!isOpen}>
-        <div className="flex flex-col p-4 bg-white shadow-md hover:shodow-lg rounded-2xl">
+        <div className="flex flex-col p-4 bg-white shadow-md hover:shodow-2xl rounded-2xl">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg"

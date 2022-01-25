@@ -11,7 +11,7 @@ const CategoryRow = () => {
 
     return <div className="bg-white py-4 bg-white font-bold text-gray-900 ">
 
-        <h2 className="font-bold text-4xl text-center my-4">Discover {collections.length > 1 ? "collections" : "collection"}</h2>
+        <h2 className="font-bold text-4xl text-center mt-4 mb-12">Discover {collections.length > 1 ? "collections" : "collection"}</h2>
 
         <div className=" flex-wrap md:flex center">
 
@@ -38,6 +38,7 @@ const CategoryRow = () => {
                         </Link>
                     </div>
 
+                    <hr className="mt-6"/>
                 </div>
 
                 <div className="hidden md:inline-block">

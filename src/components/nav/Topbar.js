@@ -9,7 +9,7 @@ export default function Topbar() {
     const socialNetworks = texts.social_network;
     const interact = useWallet()[3];
 
-    return <nav className="transition ease-in-out container mx-auto flex justify-between flex-wrap p-4">
+    return <nav className="transition ease-in-out container mx-auto flex justify-between flex-wrap p-4 absolute top-0 left-0 right-0 z-50">
         <div className="flex w-full md:w-72 center mb-3">
             <Link to={routes.home}><img className="pointer" src={beeLogo} width="40" height="40" alt=""/></Link>
         </div>

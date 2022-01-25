@@ -15,6 +15,9 @@ import LastTransactions from "@layouts/Collection/LastTransactions";
 import ForSale from "@layouts/Collection/ForSale";
 import Bids from "@layouts/Collection/Bids";
 import Sales from "@layouts/Collection/Sales";
+import RowsQuestions from "@layouts/Collection/RowQuestion";
+
+let questions = require('@src/data/json/collection-info.json').collections;
 
 const subMenuButtons = [
     'Overall Stats',
@@ -30,10 +33,11 @@ const subMenuButtons = [
 const Collection = () => {
     const {name} = useParams();
     const white = useTheme()[3];
+    const qs = questions?.filter( q => q.name === name);
 
     useEffect(() => white() , [])
 
-    return <FullContainer>
+    return <FullContainer className="pt-52 md:pt-24">
 
         <Breadcrumb>
             <Link to={routes.home}>{firstUpperCase("home")}</Link>
@@ -67,41 +71,24 @@ const Collection = () => {
             <Sales />
         </HorizontalSubMenu>
 
-
         <hr className="mt-6" />
 
-        <div className="py-12">
-            <h2 className="font-semibold text-xl mb-6">What is a {firstUpperCase(name)} ?</h2>
-
-            <p>
-                The {name} are 24x24 pixel art images, generated algorithmically. Most are punky-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example).
-            </p>
-        </div>
-
-        <hr className="mt-6" />
+        {questions.length > 0 && <RowsQuestions items={qs[0].questions} />}
 
         <div className="py-12">
-            <h2 className="font-semibold text-xl mb-6">What exactly is going on here?</h2>
-
-            <p>
-                The {name} are 24x24 pixel art images, generated algorithmically. Most are punky-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example).
-            </p>
+            <h2 className="font-semibold text-xl mb-6">How do I get a {firstUpperCase(name)}?</h2>
+            <ol>
+                <li>Download and install a Chrome browser plugin called MetaMask. This will allow websites (that you authorize) access to your Ethereum account.</li>
+                <li>If you made a new account, buy some Ether. The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.</li>
+                <li>Once you have the plugin installed, this website will recognize it and add buttons that allow you to bid on, buy and sell {name} directly in the interface.</li>
+                <li>For example, you can buy {name} for some ETH</li>
+            </ol>
         </div>
 
-        <hr className="mt-6" />
-
-        <div className="py-12">
-            <h2 className="font-semibold text-xl mb-6">How do I get a {name}?</h2>
-
-            <ul>
-                <l>Download and install a Chrome browser plugin called MetaMask. This will allow websites (that you authorize) access to your Ethereum account.</l>
-                <l>If you made a new account, buy some Ether. The MetaMask plugin has a button that will allow you to buy Ether from Coinbase.</l>
-                <l>Once you have the plugin installed, this website will recognize it and add buttons that allow you to bid on, buy and sell punks directly in the interface.</l>
-                <l>For example, you can buy Punk #8560 for 73.99 ETH ($180,199.68 USD).</l>
-            </ul>
-        </div>
+        <hr className="my-6 "/>
 
         <Link className="text-blue-600 underline" to={routes.home}>Show FAQ</Link>
+
 
     </FullContainer>
 }

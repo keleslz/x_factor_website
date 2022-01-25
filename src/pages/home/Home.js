@@ -5,7 +5,7 @@ import CategoryRow from "@layouts/home/category-row/CategoryRow";
 import Glych from "@components/react-vfx/Glych";
 import {VFXDiv} from "react-vfx";
 import ScrollMotion from "@components/react-scroll-motion/ScrollMotion";
-import useWallet from "../../hooks/useWallet";
+import useWallet from "@src/hooks/useWallet";
 import FullContainer from "@components/container/Container";
 import useTheme from "@src/hooks/useTheme";
 import {useEffect} from "react";

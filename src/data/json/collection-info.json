@@ -1,0 +1,36 @@
+{
+  "collections" : [
+    {
+      "name" : "bee",
+      "description": "10,000 unique collectible characters with proof of ownership stored on the Ethereum blockchain. The project that inspired the modern CryptoArt movement. Selected press and appearances include Mashable, CNBC, The Financial Times, Bloomberg, MarketWatch, The Paris Review, Salon, The Outline, BreakerMag, Christie's of London, Art|Basel, The PBS NewsHour, The New York Times in 2018 and again in 2021. The Bee are one of the earliest examples of a \"Non-Fungible Token\" on Ethereum, and were inspiration for the ERC-721 standard that powers most digital art and collectibles.",
+      "questions" : [
+        {
+          "title" : "What's is a Bee 1",
+          "content": "The Bee are 24x24 pixel art images, generated algorithmically. Most are punky-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example)."
+        },
+        {
+          "title" : "What's is a Bee 2",
+          "content": "The Bee are 24x24 pixel art images, generated algorithmically. Most are punky-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example)."
+        },
+        {
+          "title" : "What's is a Bee 3",
+          "content": "The Bee are 24x24 pixel art images, generated algorithmically. Most are punky-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example)."
+        }
+      ]
+    },
+    {
+      "name" : "zar",
+      "description": "10,000 unique collectible characters with proof of ownership stored on the Ethereum blockchain. The project that inspired the modern CryptoArt movement. Selected press and appearances include Mashable, CNBC, The Financial Times, Bloomberg, MarketWatch, The Paris Review, Salon, The Outline, BreakerMag, Christie's of London, Art|Basel, The PBS NewsHour, The New York Times in 2018 and again in 2021. The Zar are one of the earliest examples of a \"Non-Fungible Token\" on Ethereum, and were inspiration for the ERC-721 standard that powers most digital art and collectibles.",
+      "questions" :  [
+        {
+          "title" :  "What's is a Zar 1",
+          "content": "The zar are 24x24 pixel art images, generated algorithmically. Most are zar-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example)."
+        },
+        {
+          "title" :  "What's is a Zar 2",
+          "content": "The zar are 24x24 pixel art images, generated algorithmically. Most are zar-looking guys and girls, but there are a few rarer types mixed in: Apes, Zombies and even the odd Alien. Every punk has their own profile page that shows their attributes as well as their ownership/for-sale status (here's an example)."
+        }
+      ]
+    }
+  ]
+}
