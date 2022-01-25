@@ -9,16 +9,13 @@ const HorizontalSubMenu = ({children, buttons}) => {
 
     return <div className="my-4">
 
-        <div className="flex flex-wrap space-x-1 space-y-1">
-            {buttons.map((b, i) => <Button key={i} children={b} type="normal" color="white" bg={tabActive === i ? 'transparent' : 'gray'} onClick={() => setTabActive(i)}/>)}
+        <div className="flex flex-wrap space-x-1 space-y-1 mb-12">
+            {buttons.map((b, i) => <Button key={i} children={b} type="normal" color={tabActive === i ? 'white' : 'black'} bg={tabActive === i ? 'gray' : 'black'} onClick={() => setTabActive(i)}/>)}
         </div>
 
-        {children.map((c, index) => {
-            if(index == tabActive) {
-                return c
-            }
-        })}
-
+        <div className="px-2">
+            {children.map((c, index) => <div className={`${index == tabActive ? '' : 'hidden'}`}>{c}</div>)}
+        </div>
     </div>
 }
 
