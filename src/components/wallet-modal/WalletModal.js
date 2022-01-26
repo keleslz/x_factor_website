@@ -5,6 +5,8 @@ import useWallet from "@src/hooks/useWallet";
 const WalletModal = () => {
     const isOpen = useWallet()[0];
     const interact = useWallet()[3];
+    const connect = useWallet()[5];
+    const disconnect = useWallet()[6];
 
     return <Sail isHidden={!isOpen}>
         <div className="flex flex-col p-4 bg-white shadow-md hover:shodow-2xl rounded-2xl">
@@ -29,7 +31,10 @@ const WalletModal = () => {
                     color="white"
                     bg="blue"
                     className="mb-2"
-                    onClick={() =>  interact()}
+                    onClick={() => {
+                        connect();
+                        interact();
+                    }}
                 />
                 <Button
                     type="normal"
@@ -37,7 +42,10 @@ const WalletModal = () => {
                     color="white"
                     bg="red"
                     className="mb-2"
-                    onClick={() =>  interact()}
+                    onClick={() => {
+                        disconnect();
+                        interact();
+                    }}
                 />
             </div>
         </div>

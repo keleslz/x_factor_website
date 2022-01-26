@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {close , open } from "@redux/reducers/walletReducer";
+import {close , open, connect as connectToWallet, disconnect as disconnectWallet } from "@redux/reducers/walletReducer";
 
 const useWallet = () => {
 
@@ -14,7 +14,11 @@ const useWallet = () => {
 
     const interact = () => isOpen ? disable() : active();
 
-    return [isOpen , active, disable, interact, isConnected];
+    const connect = () => dispatch(connectToWallet());
+
+    const disconnect = () =>dispatch(disconnectWallet());
+
+    return [isOpen , active, disable, interact, isConnected, connect, disconnect];
 }
 
 export default useWallet;

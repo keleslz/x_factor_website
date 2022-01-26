@@ -38,10 +38,10 @@ const Breadcrumb = ({children}) => {
 
                     if (index === 0)
                     {
-                        return <FirstItem />
+                        return <FirstItem key={index}/>
                     }
 
-                    return <Item>{c}</Item>
+                    return <Item key={index}>{c}</Item>
                 })}
             </ol>
         </nav>

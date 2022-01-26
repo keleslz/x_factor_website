@@ -8,6 +8,8 @@ const texts = require('@data/json/text.json');
 export default function Topbar() {
     const socialNetworks = texts.social_network;
     const interact = useWallet()[3];
+    const isConnected = useWallet()[4];
+    const disconnect = useWallet()[6];
 
     return <nav className="transition ease-in-out container mx-auto flex justify-between flex-wrap p-4 absolute top-0 left-0 right-0 z-50">
         <div className="flex w-full md:w-72 center mb-3">
@@ -24,12 +26,12 @@ export default function Topbar() {
             )}
         </div>
 
-        {<div className="flex center w-full center md:w-max">
+        <div className="flex center w-full center md:w-max">
             <button
-                children="Connect wallet"
+                children={isConnected ? "Disconnect" : "Connect wallet"}
                 className="bg-gray-50 text-gray-800 p-2 transform border-2 rounded-md border-white-800 transition ease-in-out hover:text hover:font-bolder hover:scale-125"
-                onClick={() => interact()}
+                onClick={() => isConnected ? disconnect() : interact()}
             />
-        </div>}
+        </div>
     </nav>
 }

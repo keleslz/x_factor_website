@@ -14,7 +14,7 @@ const HorizontalSubMenu = ({children, buttons}) => {
         </div>
 
         <div className="px-2">
-            {children.map((c, index) => <div className={`${index == tabActive ? '' : 'hidden'}`}>{c}</div>)}
+            {children.map((c, index) => <div key={index} className={`${index == tabActive ? '' : 'hidden'}`}>{c}</div>)}
         </div>
     </div>
 }

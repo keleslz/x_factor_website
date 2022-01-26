@@ -63,7 +63,7 @@ const Collection = () => {
         <HorizontalSubMenu buttons={subMenuButtons}>
             <OverAllStats />
             <StatsTopItemsOwner />
-            <AllCollectionTypeAndAttribute />
+            <AllCollectionTypeAndAttribute name={name}/>
             <LargestSales />
             <LastTransactions />
             <ForSale />

@@ -39,4 +39,10 @@ export default class Nft
         this.isGold = param.isGold;
         this.isXRar = param.isXRar;
     }
+
+    getRarity(): string{
+        if(this.isXRar) return "xRar";
+        if(this.isGold) return "gold";
+        return "common";
+    }
 }
