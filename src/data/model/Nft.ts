@@ -27,6 +27,10 @@ export default class Nft
     public isGold: boolean = false;
     public isXRar: boolean = false;
 
+    public static XRAR = "Xrar";
+    public static GOLD = "Gold";
+    public static COMMON = "Common";
+
     constructor(param : Param) {
         this.id = param.id;
         this.imageLink = param.imageLink;
@@ -41,8 +45,8 @@ export default class Nft
     }
 
     getRarity(): string{
-        if(this.isXRar) return "xRar";
-        if(this.isGold) return "gold";
-        return "common";
+        if(this.isXRar) return Nft.XRAR;
+        if(this.isGold) return Nft.GOLD;
+        return Nft.COMMON;
     }
 }
