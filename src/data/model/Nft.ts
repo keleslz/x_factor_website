@@ -1,14 +1,12 @@
 type Param = {
-    id: number;
-    imageLink: string;
-    price: number;
-    likeCount: number;
+    id: number; // ok
+    imageLink: string; // ok
+    price:number; // ok
     isSolded: boolean;
-    collection: string;
-    collectionLength: number;
-    priceSolded: number;
-    isGold: boolean;
-    isXRar:boolean;
+    collection: string; // ok
+    isGold: boolean;// ok
+    isXRar:boolean; // ok
+    serialNumber:string; // ok
 };
 
 /**
@@ -18,14 +16,12 @@ export default class Nft
 {
     public id: number;
     public imageLink: string ;
-    public likeCount: number;
-    public price: number = 0.02;
+    public price: number;
     public isSolded: boolean = false;
     public collection: string;
-    public collectionLength: number;
-    public priceSolded: number;
     public isGold: boolean = false;
     public isXRar: boolean = false;
+    public serialNumber: string;
 
     public static XRAR = "Xrar";
     public static GOLD = "Gold";
@@ -35,13 +31,11 @@ export default class Nft
         this.id = param.id;
         this.imageLink = param.imageLink;
         this.price = param.price;
-        this.likeCount = param.likeCount;
         this.isSolded = param.isSolded;
         this.collection = param.collection;
-        this.collectionLength = param.collectionLength;
-        this.priceSolded = param.priceSolded;
         this.isGold = param.isGold;
         this.isXRar = param.isXRar;
+        this.serialNumber = param.serialNumber;
     }
 
     getRarity(): string{

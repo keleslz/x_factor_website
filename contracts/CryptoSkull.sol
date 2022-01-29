@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.7;
 
-contract Training {
+contract CryptoSkull {
 
     uint public startPrice = 20000000000000000; // 0.02ETH
     uint private priceLevel = 0;

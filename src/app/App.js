@@ -12,6 +12,7 @@ import useCollections from "@src/hooks/useCollections";
 import Collection from "@src/pages/collection/Collection";
 import GlobalComponent from "@layouts/App/GlobalComponent";
 import BaseContainer from "@components/base-container/BaseContainer";
+import config from "./config";
 
 function App() {
     useCollections();
