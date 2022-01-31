@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import Loader from "../loader/Loader";
+import Loader from "@components/loader/Loader";
 
 /**
  * @param {[ Nft[] ]} collection
@@ -16,9 +16,9 @@ const CardChangeAuto = ({collection, isFullWidth}) => {
             let i = 0;
 
             /**
-             * @type {Nft[]}
+             * @type {Nft[]}}
              */
-            const c = collection[name];
+            const c = collection[name].data;
 
             const interval = setInterval(() => {
                 setItem(c[i]);

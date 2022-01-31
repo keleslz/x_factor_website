@@ -9,9 +9,10 @@ import {getCollectionName} from "@utils/stringUtils";
 const CategoryRow = () => {
     const collections = useSelector(state => state.collections.items);
 
+
     return <div className="bg-white py-4 bg-white font-bold text-gray-900 ">
 
-        <h2 className="font-bold text-4xl text-center mt-4 mb-12">Discover {collections.length > 1 ? "collections" : "collection"}</h2>
+        <h2 className="font-bold text-4xl text-center mt-4 mb-12">Discover our {collections.length > 1 ? "collections" : "collection"}</h2>
 
         <div className=" flex-wrap md:flex center">
 

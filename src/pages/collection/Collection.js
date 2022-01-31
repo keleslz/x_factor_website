@@ -22,7 +22,7 @@ let questions = require('@src/data/json/collection-info.json').collections;
 const subMenuButtons = [
     'Overall Stats',
     'Top owners',
-    'All Skull',
+    `All`,
     'Largest sales',
     'Last transactions',
     'For sale',
