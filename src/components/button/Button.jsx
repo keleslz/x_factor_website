@@ -5,7 +5,8 @@ export default function Button({
     color = 'black',
     onClick,
     onMouseOver,
-    onMouseOut
+    onMouseOut,
+    className = ''
 })
 {
     const classNames = [
@@ -19,13 +20,13 @@ export default function Button({
         }
     ]
 
-    const className =  classNames.find(c => c.type === type.toLowerCase());
+    const basicClassName =  classNames.find(c => c.type === type.toLowerCase());
 
     return <button
             onClick={() => onClick && onClick()}
             onMouseOver={() => onMouseOver && onMouseOver()}
             onMouseOut={() => onMouseOut && onMouseOut()}
-            className={className?.className || '' }
+            className={`${basicClassName?.className} ${className}` || `${className}` }
         >
         {children}
     </button>
